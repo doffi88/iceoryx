@@ -19,11 +19,15 @@
 
 #include <stdint.h>
 
-struct RadarObject
+
+#define DATA_SIZE 1024
+
+struct IceMsg
 {
-    double x;
-    double y;
-    double z;
+    uint8_t data[DATA_SIZE];
+    size_t total_data_length;
+    bool last;
+    bool first;
 };
 
 #endif // IOX_EXAMPLES_ICEDELIVERY_TOPIC_DATA_HPP

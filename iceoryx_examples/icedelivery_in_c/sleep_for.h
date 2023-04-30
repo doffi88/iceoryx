@@ -28,9 +28,9 @@ void sleep_for(uint32_t milliseconds)
 #else
 #include <unistd.h>
 
-void sleep_for(uint32_t milliseconds)
+void sleep_for(uint32_t microseconds)
 {
-    usleep(milliseconds * 1000U);
+    usleep(microseconds);
 }
 #endif
 
